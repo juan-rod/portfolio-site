@@ -1,0 +1,110 @@
+/* .border {
+  border: 1px solid red;
+} */
+/* .main-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} */
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Karla', sans-serif; */
+:root {
+  --font-size-sm: clamp(0.8rem, 1.27vw + 0.48rem, 1.5rem);
+  --font-size-base: clamp(1rem, 1.82vw + 0.55rem, 2rem);
+  --font-size-md: clamp(1.25rem, 2.57vw + 0.61rem, 2.67rem);
+  --font-size-lg: clamp(1.56rem, 3.62vw + 0.66rem, 3.55rem);
+  --font-size-xl: clamp(1.95rem, 5.06vw + 0.69rem, 4.74rem);
+  --font-size-xxl: clamp(2.44rem, 7.04vw + 0.68rem, 6.31rem);
+  --font-size-xxxl: clamp(3.05rem, 9.76vw + 0.61rem, 8.42rem);
+}
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: 'Inconsolata', monospace;
+  background-color: #2B3467;
+  position: relative;
+  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
+ 
+}
+.container-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+}
+
+header ,footer {
+  height: 80px;
+  background-color: #BAD7E9;
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+header {
+  align-items: center;
+}
+header nav,
+header .logo {
+  flex: 1;
+  /* font-size: 32px; */
+  font-family: 'Karla', sans-serif;
+  color: #2B3467;
+  font-size: var(--font-size-md);
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  list-style-type: none;
+  font-size: 16px;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: #2B3467;
+  text-transform: uppercase;
+  letter-spacing: 1.6;
+  transition: all 250ms ease-in;
+}
+header nav ul li:hover{
+  color: #EB455F;
+  transform: translateY(-2px);
+}
+main {
+  color: #FCFFE7;
+  /* background-color:blueviolet; */
+}
+section {
+  height: 2000px;
+  margin-top: 100px;
+  width: 100%;
+}
+section.banner {
+  display: flex;
+  height: 400px;
+}
+section.banner div {
+  flex:1;
+  border: 1px solid yellow
+}
+@media (max-width: 500px) {
+  section.banner {
+    flex-direction: column;
+  }
+}
+button.scroll-up {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  border: 1px solid #FCFFE7;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+}
